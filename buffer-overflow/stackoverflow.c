@@ -19,8 +19,8 @@ void vuln( const char* input )
 
     printf("Stack before exploit:\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n\n"); /*Dump the relevant part of the stack on screen */
 
-    printf("Copying %s onto the stack\n\n", input);
     strcpy(buf, input); /* Our bo vulnerability */
+    printf("Copying %s onto the stack\n\n", buf);
 
     printf("Stack after exploit:\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n\n"); /*Dump the relevant part of the stack on screen */
 }
