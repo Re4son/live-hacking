@@ -4,11 +4,12 @@
 	    The function "vuln" contains a buffer overflow
 	    vulnerability that, when exploited, allows an
 	    attacker to execute function "exploit".
-   Compile: gcc -o stackoverflow stackoverflow.c
+   Compile: gcc -fno-stack-protector -z execstack -o stackoverflow stackoverflow.c
 */
 
 #pragma check_stack(off)
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -27,7 +28,8 @@ void vuln( const char* input )
 
 void exploit( void )
 {
-    printf("Oops, I've been pwn3d!!\n");
+    printf("Argh, I've been pwn3d!!\n\n");
+    exit(0);
 }
 
 int main( int argc, char *argv[] )
