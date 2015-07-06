@@ -34,7 +34,7 @@ int main( int argc, char *argv[] )
 {
     printf("Address of function \"vuln\"   : %p\n", vuln);
     printf("Address of function \"exploit\": %p\n", exploit);
-    printf("Address of function \"main\": %p\n", main);
+    printf("Address of function \"main\"   : %p\n", main);
 
     if (argc != 2){
         printf("Usage %s <string>\n", argv[0]);
