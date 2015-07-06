@@ -15,14 +15,14 @@
 /* function vuln: print stack on screen,copy user input into buffer without bounds checking and print stack again*/
 void vuln( const char* input )
 {
-    char buf[16];
+    char buf[10];
 
-    printf("Stack before exploit:\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n\n"); /*Dump the relevant part of the stack on screen */
+    printf("Stack before exploit:\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n\n"); /*Dump the relevant part of the stack on screen */
 
     printf("Copying %s onto the stack\n\n", input);
     strcpy(buf, input); /* Our bo vulnerability */
 
-    printf("Stack after exploit:\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n\n"); /*Dump the relevant part of the stack on screen */
+    printf("Stack after exploit:\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n\n"); /*Dump the relevant part of the stack on screen */
 }
 
 void exploit( void )
