@@ -3,7 +3,7 @@
    Purpose: Demonstration of a buffer overflow exlpoit.
 	    The function "vuln" contains a buffer overflow
 	    vulnerability that, when exploited, allows an
-	    attacker to execute function "exploit".
+	    attacker to execute function "secret" without a valid password.
    Compile: gcc -fno-stack-protector -z execstack -o stackoverflow stackoverflow.c
    Usage: ./stackoverflow <string> [-d]
 */
