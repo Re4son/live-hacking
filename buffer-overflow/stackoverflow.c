@@ -52,7 +52,7 @@ void vuln( const char* input )
 
 void secret( void )
 {
-    printf("\n[*] The secret password for the vault = \"BeHappy.1.2.3\"\n\n");
+    printf("\n[*] Secret passphrase for the money vault = \"0p3n5354m3.1337\"\n\n");
     if (hacked == 1){
         printf("[!] ARGH, I've been hacked!\n\n"); 
         exit(0);
