@@ -26,8 +26,11 @@ void secret( void );
 void vuln( const char* input )
 {
     char buf[10];
-    if (deb == 1)
-        printf("Stack before vulnerable instrucion:\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\n"); /*Dump the relevant part of the stack on screen */
+    if (deb == 1) /*Dump the relevant part of the stack on screen */
+        printf("[+] Stack before vulnerable instrucion:\n"
+		"\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n"
+		"\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n"
+		"\t%p\n\t%p\n\t%p\n\t%p\n\n");
 
     strcpy(buf, input); /* Our bo vulnerability */
 
@@ -35,9 +38,13 @@ void vuln( const char* input )
     if (strcmp(buf, PASSWORD) == 0)
         secret();
     else {
-        printf("Copying %s onto the stack\n\n", buf);
-        if (deb == 1)
-            printf("Stack after exploit:\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n %p\n\n"); /*Dump the relevant part of the stack on screen */
+        if (deb == 1) /*Dump the relevant part of the stack on screen */
+            printf("[+] Stack after copying %s onto the stack:\n"
+		   "\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n"
+		   "\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n"
+		   "\t%p\n\t%p\n\n", buf);
+	else
+	    printf("\n\tIncorrect Password.\n\n");
         hacked = 1;
     }
 
@@ -45,22 +52,22 @@ void vuln( const char* input )
 
 void secret( void )
 {
-    printf("The secret:\n\nAdministrator password = BeHappy.1.2.3\n\n");
+    printf("\n[*] The secret password for the vault = \"BeHappy.1.2.3\"\n\n");
     if (hacked == 1){
-        printf("ARGH, I've been hacked!\n\n"); 
+        printf("[!] ARGH, I've been hacked!\n\n"); 
         exit(0);
     }
 }
 
 int main( int argc, char *argv[] )
 {
-    printf("\nAddress of function \"secret\": %p\n", secret);
 
     if (argc < 2){
-        printf("Usage %s <string>\n", argv[0]);
+        printf("\n\tUsage %s <password> [-d]\n\n", argv[0]);
         return -1;
     } else if (argc == 3){
         deb = 1;
+	printf("\n[+] Address of function \"secret\":\t%p\n", secret);
     }
     vuln(argv[1]);
     return 0;
