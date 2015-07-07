@@ -1,11 +1,12 @@
 /* Name: obo.c
    Author: Re4son <re3son [at] whitedome.com.au>
-   Purpose: Demonstration of a buffer overflow exlpoit.
+   Purpose: Demonstration of an out-by-one buffer overflow exlpoit.
 	    The function "vuln" contains a buffer overflow
 	    vulnerability that, when exploited, allows an
 	    attacker to execute function "secret" without a valid password.
    Compile: gcc -fno-stack-protector -mpreferred-stack-boundary=2 -z execstack -o obo obo.c
    Usage: ./stackoverflow <string> [-d]
+          Repeat until you get a hit
 */
 
 #pragma check_stack(off)
