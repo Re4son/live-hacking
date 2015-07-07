@@ -34,17 +34,17 @@ void vuln( const char* input )
 
     strcpy(buf, input); /* Our bo vulnerability */
 
+    if (deb == 1) /*Dump the relevant part of the stack on screen */
+        printf("[+] Stack after copying %s onto the stack:\n"
+               "\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n"
+	       "\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n"
+	       "\t%p\n\t%p\n\n", buf);
+
 
     if (strcmp(buf, PASSWORD) == 0)
         secret();
     else {
-        if (deb == 1) /*Dump the relevant part of the stack on screen */
-            printf("[+] Stack after copying %s onto the stack:\n"
-		   "\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n"
-		   "\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n\t%p\n"
-		   "\t%p\n\t%p\n\n", buf);
-	else
-	    printf("\n\tIncorrect Password.\n\n");
+        printf("\n\tIncorrect Password.\n\n");
         hacked = 1;
     }
 
